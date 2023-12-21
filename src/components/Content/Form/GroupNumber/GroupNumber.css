@@ -1,0 +1,23 @@
+.number_group label input[type="radio"] {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    margin: 0;
+}
+
+.radio_labels {
+    color: white
+}
+
+.number_group label {
+    border-radius: 8px;
+    padding: 2px 4px 4px;
+    width: 120px;
+    color: white;
+    cursor: pointer;
+}
+
+.number_group {
+    margin-top: -4px;
+}

@@ -1,0 +1,26 @@
+.name {
+    display: flex;
+    gap: 12px;
+}
+
+.name input {
+    width: 180px;
+    border: 2px solid #bebebe;
+    border-radius: 8px;
+    padding: 4px 12px;
+    background-color: transparent;
+    color: white
+}
+
+.name label {
+    color: white
+}
+
+::placeholder {
+    color: whitesmoke;
+    opacity: 0.8; /* Firefox */
+  }
+  
+::-ms-input-placeholder { /* Edge 12 -18 */
+    color: whitesmoke
+}

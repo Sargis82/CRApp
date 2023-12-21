@@ -1,0 +1,158 @@
+.header-all {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    /* transition-duration: 1s; */
+    background-color: navy;
+}
+
+.header-logo {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.header-logo h2 {
+    color: whitesmoke;
+    font-size: 28px;
+}
+
+.header-logo h2 span {
+    color: #ffffffbd
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+}
+
+.header-left {
+    width: 470px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 12px;
+    padding: 8px;
+}
+
+.header-left-bottom {
+    display: flex;
+    align-items: center;
+}
+
+.header-left-bottom button {
+    border: none;
+    background-color: transparent;
+    display: inline;
+    margin-left: 12px;
+    border-radius: 8px;
+    color: rgb(182, 182, 182);
+    font-size: 28px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: 4px 8px;
+}
+
+.header-left-bottom button i {
+    color: whitesmoke
+}
+
+.header-left-bottom button:last-child {
+    padding: 4px 12px;
+    margin-left: 8px;
+}
+
+.header-left-bottom button:disabled {
+    background-color: #bebebe73;
+}
+
+.header-left-bottom button:disabled i {
+    color: #bebebe 
+}
+
+.header-left-bottom button:hover {
+    color: white;
+    background-color: #bebebe73;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+}
+
+.header-right button{
+    width: 200px;
+    height: 40px;
+    border: 2px solid #bebebe;
+    border-radius: 8px;
+    padding: 4px 12px;
+    background-color: transparent; 
+    margin-left: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    color: white
+}
+
+.header-right button:hover {
+    background-color: #bebebe6e 
+}
+
+.header-right button:disabled {
+    background-color: #bebebea4 
+}
+
+.header-right-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.colorSelect select {
+    color: white; 
+    background-color: transparent; 
+    width: 80px; 
+    height: 24px; 
+    border-radius: 8px; 
+    border: 2px solid #bebebe
+}
+
+.colorSelect select option {
+    color: white;
+}
+
+.langButtons {
+    background-color: aliceblue;
+    padding: 2px 4px 8px;
+    border-radius: 8px;
+}
+
+.langButtons label {
+    font-weight: bold; 
+    cursor: pointer;
+    padding: 0 6px 4px;
+    border-radius: 8px;
+    font-size: 14px;
+    /* transition-duration: 1s; */
+}
+
+.langButtons label input[type="radio"] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  margin: 0;
+}
+
+.lang-form {
+    background-color: aliceblue;
+    border-radius: 8px;
+}
+

@@ -1,0 +1,138 @@
+.reference {
+    border-radius: 32px;
+    max-width: 960px;
+    width: 100%;
+    padding: 12px 32px;
+    margin: 16px auto;
+    background-color: rgb(236, 255, 249);
+    transition-duration: 1s;
+}
+
+.reference hr {
+    margin: 12px auto;
+    border: 1px dashed #707070;
+}
+ 
+.refer-top {
+    display: flex;
+}
+
+.refer-top-left {
+    width: 50%;
+    text-align: left;
+}
+
+.refer-top-left h2 {
+    margin-bottom: 4px;
+    color: darkgreen
+}
+
+.refer-top-left h3 {
+    margin-top: 20px;
+    color: darkgreen
+}
+
+.gas-inj-span {
+    color: green;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.refer-top-left h3 span {
+    color: red;
+    font-weight: 700;
+}
+
+.refer-top-right {
+    width: 50%;
+}
+
+.refer-top-right-top {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.refer-top-right-top span i {
+    font-size: 28px;
+    cursor: pointer;
+    color: red
+}
+
+.refer-top-right-top span:first-child i {
+    color: green
+}
+
+.refer-top-right-top span:nth-last-child(2) i {
+    color: blue
+}
+
+.refer-top-right-top span i:hover {
+    color: #131313b2
+}
+
+.refer-top-right-bottom {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: calc(100% - 32px);
+}
+
+.refer-top-right-bottom h6 span{
+    color: #707070;
+}
+
+.refer-bottom {
+    text-align: left;
+    font-size: 12px;
+}
+
+.btnX {
+    border: none;
+    background-color: none;
+    width: 10px;
+}
+
+/* -------------------- T A B L E ------------------- */
+
+.refer-mid table {
+    border: 1px solid #8f8f8f;
+}
+
+.refer-mid th {
+    border: 1px solid #333333;
+    padding: 0 8px;
+}
+
+.refer-mid td {
+    border: 1px solid #4e4e4e;
+    padding: 0 8px;
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+.cont-div {
+    background-color: lightblue;
+    width: 900px;
+    border: 1px solid red;
+}
+
+.refer-mid tr {
+    box-sizing: border-box;
+    width: 886px;
+    margin-bottom: 1px;
+}
+
+.cont-div button {
+    background-color: darkorange;
+}
+
+/* -------------------------  PRINT -------------------------- */
+
+
+
+
+

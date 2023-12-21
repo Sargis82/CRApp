@@ -1,0 +1,29 @@
+.gas-inject label {
+    color: white;
+}
+
+.gas-inject input {
+    width: 80px;
+    border: 2px solid #bebebe;
+    border-radius: 8px;
+    padding: 4px 12px;
+    background-color: transparent;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.gas-inject {
+    margin-top: -4px;
+}
+
+.gas-gas-inject {
+    margin-top: -16px;
+}
+
+.gas-gas-inject input {
+    background-color: whitesmoke;
+    font-weight: 900;
+    font-size: 24px;
+    width: 100px;
+}

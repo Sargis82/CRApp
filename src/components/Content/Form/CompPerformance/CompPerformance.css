@@ -1,0 +1,16 @@
+.comp-perf-sel select {
+    color: white; 
+    background-color: transparent; 
+    width: 80px; 
+    height: 24px; 
+    border-radius: 8px; 
+    border: 2px solid #bebebe
+}
+
+.comp-perf-sel select option {
+    color: #707070;
+}
+
+.comp-perf-sel label {
+    color: white;
+}
