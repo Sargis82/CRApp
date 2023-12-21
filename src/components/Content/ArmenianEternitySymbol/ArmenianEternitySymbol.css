@@ -1,0 +1,22 @@
+.symbol {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.symbol-icon {
+    display: block;
+    animation: mymove infinite 15s linear;
+    z-index: -10;
+}
+
+@keyframes mymove {
+
+    from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+}

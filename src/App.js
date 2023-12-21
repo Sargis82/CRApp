@@ -6,6 +6,7 @@ import Form from './components/Content/Form/Form';
 import Footer from './components/Footer/Footer';
 import Reference from './components/Content/Reference/Reference';
 import randomID from "./components/jsFiles/randomIDGenerator";
+import ArmenianEternitySymbol from './components/Content/ArmenianEternitySymbol/ArmenianEternitySymbol';
 
 function App() {
 
@@ -89,7 +90,6 @@ const deleteReferAllNotImportantHandler = () => {
 };
 
 const refreshAllHandler = () => {
-    // setLangChange('eng');
     setFirstName('');
     setPassword('Aa0404');
     setGasInjectionValue('60');
@@ -102,7 +102,6 @@ const refreshAllHandler = () => {
     setRepairCount(null);
     setFormToggle(true);
     setRefers([]);
-    // setBackColor('Teal');
 }
   
 const handleCancel = () => {
@@ -239,7 +238,7 @@ const handlePrint = (referId) => {
                 /></div>
             }
             <div className='content'>
-                <Reference  
+                {refers.length > 0 ? <Reference  
                     toggleImportantRefer={toggleImportantRefer}
                     langIndex={langIndex} 
                     repairCount={repairCount}
@@ -247,7 +246,7 @@ const handlePrint = (referId) => {
                     deleteRefer={deleteReferHandler}
                     backColor={backColor}
                     handlePrint={handlePrint}
-                />
+                /> : <ArmenianEternitySymbol backColor={backColor} />}
             </div>
             <Footer backColor={backColor} setBackColor={setBackColor} />
         </>
