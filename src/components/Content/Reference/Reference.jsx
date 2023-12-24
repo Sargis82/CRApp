@@ -7,7 +7,7 @@ function Reference ({ refers, deleteRefer, backColor, toggleImportantRefer, hand
     return (
             <>
             { refers.map((refer) => (
-                <div className="reference" id={refer.id} key={refer.id} style={{border: `5px dashed ${backColor}`, backgroundColor: refer.importantRef ? '#e9feec' : '#f4e5ee' }}>
+                <div className="reference" id={refer.id} key={refer.id} style={{ backgroundColor: refer.importantRef ? '#e9feec' : '#f4e5ee' }}>
                     <div className="refer-top">
                         <div className="refer-top-left">
                             <h2>{refer.firstName ? refer.firstName : '«___________________»'}</h2>
