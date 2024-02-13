@@ -7,7 +7,7 @@
 
 .symbol-icon {
     display: block;
-    animation: mymove infinite 15s linear;
+    animation: mymove infinite 180s linear;
     z-index: -10;
 }
 

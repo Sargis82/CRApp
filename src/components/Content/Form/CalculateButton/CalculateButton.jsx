@@ -10,7 +10,7 @@ function CalculateButton({ handleCalculate, langIndex }) {
 
     return (
         <>
-            <button type="submit" className="calc-btn" onClick={handleClick}>
+            <button type="submit" className="calc-btn" onClick={handleClick} >
                 {langData.textBtnFormCalc[langIndex]}
             </button>
         </>

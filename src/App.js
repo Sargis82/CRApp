@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import langData from './components/langData/langData'
-import './App.css';
 import HeaderForm from './components/Header/Header'
 import Form from './components/Content/Form/Form';
 import Footer from './components/Footer/Footer';
 import Reference from './components/Content/Reference/Reference';
 import randomID from "./components/jsFiles/randomIDGenerator";
 import ArmenianEternitySymbol from './components/Content/ArmenianEternitySymbol/ArmenianEternitySymbol';
+import './App.css';
 
 function App() {
 
@@ -24,6 +24,7 @@ function App() {
     const [formToggle, setFormToggle] = useState(true)
     const [refers, setRefers] = useState([])
     const [backColor, setBackColor] = useState('Teal')
+    const [toggleAllRefresh, setToggleAllRefresh] = useState(true)
     
     const calculate = () => {
         let opt = selectedOption
@@ -32,9 +33,10 @@ function App() {
         }
         const rC = ((+gasInjectionValue) * (+selectedUnits) * (+selectedRadioGroupNumber) * (Math.pow(10, 6))) / ((+opt) * (+intervalValue));
         setFormToggle(!formToggle)
+        
         return rC;
     };    
-    
+
 let langIndex = null // language data index 
 
 if (langChange === "hay") {
@@ -75,7 +77,14 @@ const addReferHandler = () => {
             tblName: langData.textTblName[langIndex],
             tblDrawNum: langData.textTblDrawNum[langIndex],
             tblUnMeas: langData.textTblUnMeas[langIndex],
-            tblQuantity: langData.textTblQuantity[langIndex]
+            tblQuantity: langData.textTblQuantity[langIndex],
+            textTblBottom: langData.textTblBottom[langIndex]
+        },
+        title: {
+            titleImp: langData.titleImp[langIndex],
+            titleUnImp: langData.titleUnImp[langIndex],
+            titlePrint: langData.titlePrint[langIndex],
+            titleDelete: langData.titleDelete[langIndex],
         }
     }
     setRefers([ newRefer, ...refers ])
@@ -90,8 +99,9 @@ const deleteReferAllNotImportantHandler = () => {
 };
 
 const refreshAllHandler = () => {
-    setFirstName('');
-    setPassword('Aa0404');
+    // setLangChange('eng');
+    // setFirstName('');
+    // setPassword('Aa0404');
     setGasInjectionValue('60');
     setSelectedRadioGroupNumber('1');
     setSelectedOption('20000');
@@ -102,10 +112,20 @@ const refreshAllHandler = () => {
     setRepairCount(null);
     setFormToggle(true);
     setRefers([]);
+    // setBackColor('Teal');
+    setToggleAllRefresh(!toggleAllRefresh)
 }
-  
+
+const toggleAllRefreshHandler = () => {
+    setToggleAllRefresh(!toggleAllRefresh)
+}
+
+const handleCancelAllRefresh = () => {
+    setToggleAllRefresh(!toggleAllRefresh)
+}
+
 const handleCancel = () => {
-    setFormToggle(!formToggle)
+    setFormToggle(!formToggle) 
 }
 
 const toggleImportantRefer = (id) => {
@@ -193,7 +213,7 @@ const handlePrint = (referId) => {
     td:nth-child(2) {text-align: left; padding-left: 18px; }
     .cont-div {background-color: lightblue; width: 500px; border: 1px solid red}
     .cont-div tr {box-sizing: border-box; width: 694px}
-    .cont-div button, .refer-bottom {display: none;}`
+    .cont-div button {display: none;}`
 
     const content = document.getElementById(referId).innerHTML;
     const printWindow = window.open('', '_blank');
@@ -218,9 +238,10 @@ const handlePrint = (referId) => {
                 langChange={langChange} setLangChange={setLangChange}
                 backColor={backColor} setBackColor={setBackColor}
                 langIndex={langIndex}
-                refreshAll={refreshAllHandler}
                 deleteReferAllNotImportant={deleteReferAllNotImportantHandler}
                 refers={refers}
+                toggleAllRefresh={toggleAllRefresh} 
+                toggleAllRefreshHandler={toggleAllRefreshHandler}
             />  
             {!formToggle && <div className="form-hide-div"> <div className='hd' onClick={handleCancel} >
                 </div><Form
@@ -237,6 +258,18 @@ const handlePrint = (referId) => {
                     addRefer={addReferHandler}
                 /></div>
             }
+            
+            {!toggleAllRefresh && <div className="form-hide-div">
+                <div className='hd' onClick={handleCancelAllRefresh}></div>
+                <div style={{ backgroundColor: backColor }} className='popupYesNo' >
+                    <p>{langData.textPopUpOriginSettings[langIndex]}</p>
+                    <div className='buttons'>
+                        <button onClick={refreshAllHandler}>{langData.textYes[langIndex]}</button>
+                        <button onClick={handleCancelAllRefresh}>{langData.textNo[langIndex]}</button>
+                    </div>
+                </div>
+            </div>}
+            
             <div className='content'>
                 {refers.length > 0 ? <Reference  
                     toggleImportantRefer={toggleImportantRefer}

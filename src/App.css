@@ -30,6 +30,7 @@ body {
 .form-hide-div {
     width: 100%;
     height: calc(100vh - 160px);
+    /* From https://css.glass */
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(3px);
@@ -46,4 +47,33 @@ body {
     height: calc(100vh - 120px);
     position: fixed;
     top: 0px;
+}
+
+.popupYesNo {
+    width: 400px;
+    /* height: 100px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+    border-radius: 16px;
+    z-index: 11;
+}
+
+.popupYesNo p {
+    color: whitesmoke;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.buttons button {
+    cursor: pointer;
+    width: 50px;
+    height: 30px;
 }

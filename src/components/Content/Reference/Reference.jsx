@@ -7,7 +7,7 @@ function Reference ({ refers, deleteRefer, backColor, toggleImportantRefer, hand
     return (
             <>
             { refers.map((refer) => (
-                <div className="reference" id={refer.id} key={refer.id} style={{ backgroundColor: refer.importantRef ? '#e9feec' : '#f4e5ee' }}>
+                <div className="reference" id={refer.id} key={refer.id} style={{backgroundColor: refer.importantRef ? '#e9feec' : '#f4e5ee' }}>
                     <div className="refer-top">
                         <div className="refer-top-left">
                             <h2>{refer.firstName ? refer.firstName : '«___________________»'}</h2>
@@ -36,9 +36,8 @@ function Reference ({ refers, deleteRefer, backColor, toggleImportantRefer, hand
                                 <span> - </span>
                                 <span>{refer.intervalValue}</span>
                             </div>
-
                             <div>
-                                <span>{refer.text.sparePart}</span>
+                                <span>{refer.text.sparePart} *</span>
                                 <span> - </span>
                                 <span>
                                     {(refer.selectedPart === 'none') 
@@ -52,16 +51,14 @@ function Reference ({ refers, deleteRefer, backColor, toggleImportantRefer, hand
                         </div>
                         <div className="refer-top-right">
                             <div className="refer-top-right-top">
-
-                            <span type="button" onClick={() => toggleImportantRefer(refer.id)}>
-                                {refer.importantRef ? (
-                                    <i className="fas fa-check-square"></i>
-                                ) : (
-                                    <i className="far fa-square"></i>
-                                )}</span>
-                  
-                                <span type='button' onClick={() => handlePrint(refer.id)}><i className="fas fa-print"></i></span>
-                                <span type='button' onClick={() => deleteRefer(refer.id)}><i className="fas fa-window-close"></i></span>
+                                <span type='button' title={refer.importantRef ? refer.title.titleImp : refer.title.titleUnImp} onClick={() => toggleImportantRefer(refer.id)}>
+                                    {refer.importantRef ? (
+                                        <i className="fas fa-check-square"></i>
+                                    ) : (
+                                        <i className="far fa-square"></i>
+                                    )}</span>
+                                <span type='button' title={refer.title.titlePrint} onClick={() => handlePrint(refer.id)}><i className="fas fa-print"></i></span>
+                                <span type='button' title={refer.title.titleDelete} onClick={() => deleteRefer(refer.id)}><i className="fas fa-window-close"></i></span>
                             </div>
 
                             <div className="refer-top-right-bottom">
@@ -89,7 +86,7 @@ function Reference ({ refers, deleteRefer, backColor, toggleImportantRefer, hand
                     }
                     <hr />
                     <div className="refer-bottom">
-                        <p>Sargis Khachatryan ©</p>
+                        {refer.selectedPart === 'main' || refer.selectedPart === 'all' ? <p>* - {refer.text.textTblBottom}</p> : null}
                     </div>
                 </div>
             ))}

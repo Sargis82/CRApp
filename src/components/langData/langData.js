@@ -86,9 +86,9 @@ const langData = {
 
     "textCompPerform":
     [
-        "կոմպրեսորի արտադրողականությունը (մ³/ժ)",
-        "compressor performance (m³/h)",
-        "производительность компрессора (м³/ч)",
+        "արտադրողականությունը (մ³/ժ)",
+        "performance (m³/h)",
+        "производительность (м³/ч)",
     ],
 
     "textRepairInterval": 
@@ -195,6 +195,80 @@ const langData = {
         "quantity",
         "количество",
     ],
+
+    "textTblBottom":
+    [
+        "վերջին 5 տարվա միջին",
+        "average of the last 5 years",
+        "средний показатель за последние 5 лет",
+    ],
+
+    "textPopUpOriginSettings":
+    [
+        "զանկանու՞մ եք վերադառնալ սկզբնական կարգավորումներին",
+        "do you want to go back to the original settings?",
+        "хотите вернуться к исходным настройкам?"
+    ],
+
+    "textYes": 
+    [
+        "Այո",
+        "Yes",
+        "Да",
+    ],
+
+    "textNo": 
+    [
+        "Ոչ",
+        "No",
+        "Нет",
+    ],
+
+    "titleRestor": 
+    [
+        "վերադառնալ սկզբնական կարգավորումներին",
+        "return to original settings",
+        "вернуться к исходным настройкам",
+    ],
+
+    "titleUnImportant": 
+    [
+        "ջնջել ոչ կարևոր տեղեկանքները",
+        "delete unimportant references",
+        "удалить ненужные справки",
+    ],
+
+    "titleImp": 
+    [
+        "կարևոր",
+        "important",
+        "важный",
+    ],
+
+    "titleUnImp": 
+    [
+        "անկարևոր",
+        "unimportant",
+        "неважный",
+    ],
+
+    "titlePrint":
+    [
+        "տպել",
+        "print",
+        "печатать", 
+    ],
+
+    "titleDelete":
+    [
+        "ջնջել",
+        "delete",
+        "удалить", 
+    ]
+
+
+
+
 }
 
 export default langData

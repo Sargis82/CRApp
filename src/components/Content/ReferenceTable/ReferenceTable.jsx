@@ -5,15 +5,11 @@ import langData from '../../langData/langData'
 
 function ReferanceTable({ refer }) {
 
-  let data = refer.password === 'Ss2668' ? data2668 : refer.password === 'Aa0404' ? data0404 : false
+  let data = refer.password === 'Ss2668' ? data2668 : data0404 
 
   let n = 1;
   let spName
   
-  if (!data) {
-    return <p style={{width: '200px'}}>{refer.password}---Error 404</p>
-  }
-
   if (refer.selectedPart === 'all') { 
 
     return (

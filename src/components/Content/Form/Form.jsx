@@ -20,7 +20,7 @@ function Form({ gasInjectionValue, setGasInjectionValue,
                 formToggle, setFormToggle,
                 backColor,
                 langIndex, 
-                addRefer
+                addRefer, 
                 }) {
     
     const handleCancel = () => {
