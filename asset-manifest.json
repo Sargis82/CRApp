@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/CRApp/static/css/main.1d58c0b8.css",
-    "main.js": "/CRApp/static/js/main.a28bf434.js",
+    "main.css": "/CRApp/static/css/main.745d790e.css",
+    "main.js": "/CRApp/static/js/main.2bb2cb98.js",
     "static/media/logo.png": "/CRApp/static/media/logo.224a410716cb38fa8114.png",
     "index.html": "/CRApp/index.html",
-    "main.1d58c0b8.css.map": "/CRApp/static/css/main.1d58c0b8.css.map",
-    "main.a28bf434.js.map": "/CRApp/static/js/main.a28bf434.js.map"
+    "main.745d790e.css.map": "/CRApp/static/css/main.745d790e.css.map",
+    "main.2bb2cb98.js.map": "/CRApp/static/js/main.2bb2cb98.js.map"
   },
   "entrypoints": [
-    "static/css/main.1d58c0b8.css",
-    "static/js/main.a28bf434.js"
+    "static/css/main.745d790e.css",
+    "static/js/main.2bb2cb98.js"
   ]
 }
